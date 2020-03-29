@@ -6,7 +6,7 @@
     Theme name: Nginxy
     Theme author: @lfelipe1501
 \*------------------------------------*/
-// Configure .nginxy here:
+// Configure Nginxy here:
 var websiteName = '';
 var websiteURL = '';
 // End of normal settings.
@@ -60,7 +60,7 @@ $('td a').each(function(){
 		if (fileExt.toLowerCase() == formats[i].toLowerCase()) {
 			var found = 1;
 			var oldText = $(this).text();
-			$(this).html('<img class="icons" src="/.nginxy/images/icons/' + formats[i] + '.png" style="margin:0px 4px -4px 0px"></img></a>' + oldText);
+			$(this).html('<img class="icons" src="/Nginxy/images/icons/' + formats[i] + '.png" style="margin:0px 4px -4px 0px"></img></a>' + oldText);
 			return;
 		}
 	}
@@ -69,7 +69,7 @@ $('td a').each(function(){
 	if ($(this).text().indexOf("Parent directory") >= 0) {
 		var found = 1;
 		var oldText = $(this).text();
-		$(this).html('<img class="icons" src="/.nginxy/images/icons/home.png" style="margin:0px 4px -4px 0px">' + oldText);
+		$(this).html('<img class="icons" src="/Nginxy/images/icons/home.png" style="margin:0px 4px -4px 0px">' + oldText);
 		return;
 	}
 
@@ -78,7 +78,7 @@ $('td a').each(function(){
 	if ($(this).attr('href').substr($(this).attr('href').length - 1) == '/') {
 		var found = 1;
 		var oldText = $(this).text();
-		$(this).html('<img class="icons" src="/.nginxy/images/icons/folder.png" style="margin:0px 4px -4px 0px">' + oldText.substring(0, oldText.length - 1));
+		$(this).html('<img class="icons" src="/Nginxy/images/icons/folder.png" style="margin:0px 4px -4px 0px">' + oldText.substring(0, oldText.length - 1));
 
 		// Fix for annoying jQuery behaviour where inserted spaces are treated as new elements -- which breaks my search.
 		var string = ' ' + $($(this)[0].nextSibling).text();
@@ -92,7 +92,7 @@ $('td a').each(function(){
 	// File format not supported by Better Listings, so let's load a generic icon.
 	if (found == 0){
 		var oldText = $(this).text();
-		$(this).html('<img class="icons" src="/.nginxy/images/icons/error.png" style="margin:0px 4px -4px 0px">' + oldText);
+		$(this).html('<img class="icons" src="/Nginxy/images/icons/error.png" style="margin:0px 4px -4px 0px">' + oldText);
 		return;
 	}
 });
