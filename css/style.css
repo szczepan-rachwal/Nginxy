@@ -120,7 +120,7 @@ tr td:first-of-type {
     padding-right:10px;
 }
 th:first-of-type {
-    padding-left:10px;
+    padding-left:0px;
 }
 td {
     padding:3px 0;
