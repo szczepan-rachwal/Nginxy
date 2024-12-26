@@ -26,8 +26,8 @@ var currentDir = last.charAt(0) + last.slice(1);
 var dirTrun;
 
 // Truncate long folder names.
-if (currentDir.length > 19){
-	var currentDir = currentDir.substring(0, 18) + '...';
+if (currentDir.length > 150){
+	var currentDir = currentDir.substring(0, 150) + '...';
 }
 
 // Updating page title.
