@@ -96,4 +96,21 @@ $('td a').each(function(){
 		return;
 	}
 });
+
+// Remove stuff to simplify downloading entire folders
+
+$('td a').each(function(){
+	// Remove parent directory link
+	if ($(this).text().indexOf("Parent directory") >= 0) {
+		$(this).removeAttr('href');
+		return;
+	}
+});
+
+$('th a').each(function(){
+	// Remove sorting
+	$(this).removeAttr('href');
+	return;
+});
+
 });
